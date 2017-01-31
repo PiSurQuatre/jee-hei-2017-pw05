@@ -24,7 +24,7 @@ public class WSConfig {
     @Bean
     public Endpoint Endpoint(){
         EndpointImpl endPointImpl = new EndpointImpl(bus, clientWS);
-        endPointImpl.setAddress("/services");
+        endPointImpl.setAddress("/client");
         endPointImpl.publish();
         return endPointImpl;
     }

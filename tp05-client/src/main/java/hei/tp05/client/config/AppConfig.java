@@ -8,7 +8,6 @@ import org.apache.cxf.jaxws.JaxWsProxyFactoryBean;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
@@ -19,7 +18,6 @@ public class AppConfig {
     @Bean
     public ClientWS clientWebService()
     {
-
         LOGGER.info("clientWebService()");
         JaxWsProxyFactoryBean jwspfb = new JaxWsProxyFactoryBean();
         jwspfb.setServiceClass(ClientWS.class);
