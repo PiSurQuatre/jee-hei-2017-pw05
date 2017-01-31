@@ -13,7 +13,10 @@
     </properties>
 
   <modules>
-  	<module>tp05-core</module>
+      <module>tp05-core</module>
+      <module>tp05-server</module>
+      <module>tp05-client</module>
+      <module>tp05-contract</module>
   </modules>
   
   <build>
