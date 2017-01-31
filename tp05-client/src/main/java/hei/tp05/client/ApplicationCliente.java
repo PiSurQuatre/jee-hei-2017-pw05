@@ -17,7 +17,7 @@ import java.util.List;
  */
 public class ApplicationCliente {
 
-    private final static Logger LOGGER = LoggerFactory.getLogger(AppConfig.class);
+    private final static Logger LOGGER = LoggerFactory.getLogger(ApplicationCliente.class);
 
 
 
@@ -27,7 +27,10 @@ public class ApplicationCliente {
         LOGGER.info("Application lancée");
         ConfigurableApplicationContext context = new AnnotationConfigApplicationContext("hei.tp05.client.config");
         ClientWS cws = context.getBean(ClientWS.class);
-        System.out.println(cws.getAllClients().toString());
+        for(ClientDTO client:cws.getAllClients())
+        {
+            System.out.println(client.getNom()+" "+client.getPrenom());
+        }
         context.close();
 
     }
